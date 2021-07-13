@@ -58,7 +58,7 @@ namespace TollBooth
                         // Upload blob.
                         stream.Position = 0;
                         // TODO 7: Asynchronously upload the blob from the memory stream.
-                        // COMPLETE: await blob...;
+                        await blob.UploadFromStreamAsync(stream);
 
                         successful = true;
                     }
@@ -72,7 +72,7 @@ namespace TollBooth
 
             return successful;
         }
-
+        //vinni
         /// <summary>
         /// Used for mapping from a LicensePlateDataDocument object to a LicensePlateData object.
         /// </summary>
